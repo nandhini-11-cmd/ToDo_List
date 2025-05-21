@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="">
+    </head>
+    <body class="bg-gray-500">
+        <div class="bg-gray-300 w-1/2 h-auto mx-auto italic mt-10">
+           <h1 class="text-xl font-bold text-center py-5">Income Expenditure Calculator</h1>
+           
+           <div class=" flex justify-center">
+            <p id="netbalance" class="border-2 border-black w-[180px] text-center  m-4 p-2 rounded-xl bg-indigo-500 text-white font-semibold">Net Balance  </p>
+            <p id="tincome" class="border-2 border-black w-[180px] text-center  m-4 p-2 rounded-xl bg-emerald-400 text-white font-semibold">Income</p>
+            <p id="texpenses" class="border-2 border-black w-[180px]  text-center m-4 p-2 rounded-xl bg-red-500 text-white font-semibold">Expenses</p>            
+           </div>   
+           
+           
+        <div class=" ml-2 mb-6 mt-6">
+            <form id="formid" action="">
+          <input id="idate" type="date" required class="border-2 border-black p-2 rounded ml-2 font-semibold " />
+         <select id="dropdown" name="dropdown" required class="border-2 border-black p-2 rounded w-40 ml-2 mr-30 font-semibold" >
+            <option value="income">Income</option>
+            <option value="expenses">Expenses</option>
+         </select>
+          <input id="desc" type="text" placeholder="Enter description" required class="border-2 border-black p-2 rounded ml-2 mt-4  font-semibold " >
+          <input id="amount" type="number" placeholder="Enter amount $" required class="border-2 border-black p-2 rounded ml-2 mt-4  font-semibold" >
+           <div class="mt-4">
+            <input type="submit"  class="border-2 border-black px-4 py-1 rounded ml-2 m-4 bg-emerald-400 font-semibold">
+
+            <input type="Reset"  class="border-2 border-black px-4 py-1 rounded ml-2 m-4 bg-red-400 font-semibold">
+         
+          </div>
+               </form>
+        </div>
+        <hr>
+        <div class="mt-4 ">
+            <div class=" flex justify-center font-semibold">
+           <input type="radio" name="anyone" value="all" class="m-2">All
+           <input type="radio"  name="anyone" value="income" class="m-2 ">Income
+           <input type="radio"  name="anyone" value="expenses" class="m-2 ">Expenses
+           </div>
+           <table class="border-2 border-collapse w-1/2 h-auto mx-auto border-black  rounded mt-4 bg-gray-400 ">
+            <thead>
+            <tr>
+            <th class="border border-black px-6  py-2">#</th> 
+            <th class="border border-black px-6 py-2">Date</th>
+            <th class="border border-black px-6 py-2">Type</th>
+            <th class="border border-black  px-6 py-2">Description</th>
+            <th class="border border-black  px-6 py-2">Amount</th>
+            <th class="border border-black  px-6 py-2">Action</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+           </thead>
+           </table>
+        </div>
+        </div>  
+        <script src="script.js"></script>
+    </body>
+</html>
